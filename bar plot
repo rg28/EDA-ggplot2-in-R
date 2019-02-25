@@ -1,0 +1,12 @@
+library(ggplot2)
+theme_set(theme_bw())
+
+#x is category or factor , y=numeric
+
+# Draw plot
+ggplot(cty_mpg, aes(x=, y=)) + 
+  geom_bar(stat="identity", width=.5, fill="tomato3") + #tomato3 is colour
+  labs(title="", 
+       subtitle="", 
+       caption="") + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6))
