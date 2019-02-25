@@ -1,0 +1,15 @@
+If you want to show the relationship as well as the distribution in the same chart, use the marginal histogram. 
+It has a histogram of the X and Y variables at the margins of the scatterplot.
+Distribution will be displayed on top of the actual chart
+
+library(ggplot2)
+library(ggExtra)
+
+#sample scatterplot
+theme_set(theme_bw())  # pre-set the bw theme.
+g <- ggplot(data, aes(x,y)) + 
+  geom_count() + 
+  geom_smooth(method="lm", se=F)
+
+ggMarginal(g, type = "histogram", fill="transparent")
+ggMarginal(g, type = "boxplot", fill="transparent")
