@@ -1,0 +1,19 @@
+library(ggplot2)
+theme_set(theme_bw())  # pre-set the bw theme.
+
+# Scatterplot with simple line
+#x=numeric,y=numeric
+gg <- ggplot(midwest,aes=(x=,y=)) + 
+  geom_point(col=) + 
+  geom_smooth(method="loess", se=F) + #method="lm"
+  xlim(c(0, 0.1)) + 
+  ylim(c(0, 500000)) + 
+  labs(subtitle="", 
+       y="", 
+       x="", 
+       title="", 
+       )
+plot(gg)
+
+
+
