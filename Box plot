@@ -1,0 +1,13 @@
+library(ggplot2)
+theme_set(theme_classic())
+
+#y-numeric x-categorical
+
+# Plot
+g <- ggplot(data, aes(x, y))
+g + geom_boxplot(varwidth=T, fill="plum") + 
+    labs(title="Box plot", 
+         subtitle="",
+         caption="",
+         x="",
+         y="")
