@@ -1,0 +1,33 @@
+library(ggplot2)
+theme_set(theme_classic())
+
+#Histogram on a Continuous (Numeric) Variable
+
+g <- ggplot(data, aes(value1)) + scale_fill_brewer(palette = "Spectral")
+g + geom_histogram(aes(fill=value2), 
+                   binwidth = .1, 
+                   col="black", 
+                   size=.1) +  # change binwidth
+  labs(title="Histogram with Auto Binning", 
+       subtitle="")  
+g + geom_histogram(aes(fill=value2), 
+                   bins=5, 
+                   col="black", 
+                   size=.1) +   # change number of bins
+  labs(title="Histogram with Fixed Bins", 
+       subtitle="") 
+       
+ 
+library(ggplot2)
+theme_set(theme_classic())
+# Histogram on a Categorical variable
+
+g <- ggplot(data, aes(value))
+g + geom_bar(aes(fill=value2), width = 0.5) + 
+  theme(axis.text.x = element_text(angle=65, vjust=0.6)) + 
+  labs(title="Histogram on Categorical Variable", 
+       subtitle="")
+       
+       
+       
+       
