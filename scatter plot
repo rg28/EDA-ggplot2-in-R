@@ -3,7 +3,7 @@ theme_set(theme_bw())  # pre-set the bw theme.
 
 # Scatterplot with simple line
 #x=numeric,y=numeric
-gg <- ggplot(midwest,aes=(x=,y=)) + 
+gg <- ggplot(data,aes=(x=,y=)) + 
   geom_point(col=) + 
   geom_smooth(method="loess", se=F) + #method="lm"
   xlim(c(0, 0.1)) + 
