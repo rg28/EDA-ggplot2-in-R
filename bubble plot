@@ -1,0 +1,9 @@
+#4 dimensional scatter plot
+
+In simpler words, bubble charts are more suitable 
+if you have 4-Dimensional data where 
+  two of them are numeric (X and Y) and 
+  one other categorical (color) and another numeric variable (size).
+
+g<-ggplot(data, aes(v1, v2)) +
+  geom_point(aes(size=v3, color=v4))
